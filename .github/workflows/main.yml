@@ -8,7 +8,6 @@ jobs:
         name: Deploy to server
         runs-on: ubuntu-latest
         steps:
-            - name: Checkout repository
               uses: actions/checkout@v2
             - name: Sync files
               uses: SamKirkland/FTP-Deploy-Action@4.3.0
