@@ -1,0 +1,21 @@
+name: Deploy via Github Actions to Production
+on:
+    push:
+        branches: [main]
+    workflow_dispatch:
+jobs:
+    test:
+        name: Deploy to server
+        runs-on: ubuntu-latest
+        steps:
+            - name: Checkout repository
+              uses: actions/checkout@v2
+            - name: Sync files
+              uses: SamKirkland/FTP-Deploy-Action@4.3.0
+              with:
+                  server: ${{ secrets.FTP_SERVER }}
+                  username: ${{ secrets.FTP_USERNAME }}
+                  password: ${{ secrets.FTP_PASSWORD }}
+                  server-dir: ${{ secrets.FTP_SERVER_DIR }}
+                  exclude: '[**/.**/**, .gitignore, .github, export-sample,  **/.git/**, **/node_modules/**, **/vendor/**, .editorconfig, README.md, **.json, **.lock, postcss.config.js, **/src/**]'
+                  local-dir: ./
