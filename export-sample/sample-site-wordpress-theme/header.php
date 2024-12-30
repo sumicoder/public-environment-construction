@@ -21,12 +21,11 @@
 					<li><a href="<?php echo HOME_URL; ?>" title="ホームに移動する">ホーム</a></li>
 					<li><a href="<?php echo ABOUT_URL; ?>" title="私たちについてに移動する">私たちについて</a></li>
 					<li><a href="<?php echo COMPANY_URL; ?>" title="会社概要に移動する">会社概要</a></li>
-					<li><a href="<?php echo WORKS_URL; ?>" title="実績紹介に移動する">実績紹介</a></li>
-					<li><a href="<?php echo SERVICES_URL; ?>" title="事業内容に移動する">事業内容</a></li>
-					<li><a href="<?php echo ITEMS_URL; ?>" title="商品紹介に移動する">商品紹介</a></li>
+					<li><a href="<?php echo WORKS_URL; ?>" title="実績に移動する">実績</a></li>
+					<li><a href="<?php echo ITEMS_URL; ?>" title="商品に移動する">商品</a></li>
 					<li><a href="<?php echo CONTACT_URL; ?>" title="お問い合わせに移動する">お問い合わせ</a></li>
-					<li><a href="<?php echo TOPICS_URL; ?>" title="トピックスに移動する">トピックス</a></li>
 					<li><a href="<?php echo RECRUIT_URL; ?>" title="採用情報に移動する">採用情報</a></li>
+					<li><a href="<?php echo TOPICS_URL; ?>" title="トピックスに移動する">トピックス</a></li>
 					<li><a href="<?php echo THANKS_URL; ?>" title="お問い合わせ 完了ページに移動する">お問い合わせ 完了ページ</a></li>
 				</ul>
 			</nav>

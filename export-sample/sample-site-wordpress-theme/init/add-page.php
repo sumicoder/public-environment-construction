@@ -6,12 +6,11 @@ function create_pages_and_setting()
 		array('title' => 'トップページ', 'name' => 'top', 'parent' => '', 'templateName' => 'front-page.php'),
 		array('title' => '私たちについて', 'name' => 'about', 'parent' => '', 'templateName' => 'page-about.php'),
 		array('title' => '会社概要', 'name' => 'company', 'parent' => '', 'templateName' => 'page-company.php'),
-		array('title' => '実績紹介', 'name' => 'works', 'parent' => '', 'templateName' => 'archive-works.php'),
-		array('title' => '事業内容', 'name' => 'services', 'parent' => '', 'templateName' => 'page-services.php'),
-		array('title' => '商品紹介', 'name' => 'items', 'parent' => '', 'templateName' => 'archive-items.php'),
+		array('title' => '実績', 'name' => 'works', 'parent' => '', 'templateName' => 'archive-works.php'),
+		array('title' => '商品', 'name' => 'items', 'parent' => '', 'templateName' => 'archive-items.php'),
 		array('title' => 'お問い合わせ', 'name' => 'contact', 'parent' => '', 'templateName' => 'page-contact.php'),
-		array('title' => 'トピックス', 'name' => 'topics', 'parent' => '', 'templateName' => 'archive-topics.php'),
 		array('title' => '採用情報', 'name' => 'recruit', 'parent' => '', 'templateName' => 'page-recruit.php'),
+		array('title' => 'トピックス', 'name' => 'topics', 'parent' => '', 'templateName' => 'archive-topics.php'),
 		array('title' => 'お問い合わせ 完了ページ', 'name' => 'thanks', 'parent' => '', 'templateName' => 'page-thanks.php'),
  );
 	foreach ($pages_array as $key => $value) {

@@ -21,11 +21,8 @@ function my_script_init()
 	wp_enqueue_script('simplebar', '//cdnjs.cloudflare.com/ajax/libs/simplebar/6.2.5/simplebar.min.js', array(), '6.2.5', true);
 	wp_enqueue_style('simplebar', '//cdnjs.cloudflare.com/ajax/libs/simplebar/6.2.5/simplebar.min.css', array(), '6.2.5');
 
-	// YubinBango
-	wp_enqueue_script('yubinbango', '//yubinbango.github.io/yubinbango/yubinbango.js', array(), null, true);
-
 	// テーマのJavaScript
-	wp_enqueue_script('theme-common', get_theme_file_uri('/assets/js/common.js'), array('gsap','swiper','simplebar','yubinbango'), filemtime(get_theme_file_path('/assets/js/common.js')), true);
+	wp_enqueue_script('theme-common', get_theme_file_uri('/assets/js/common.js'), array('gsap','swiper','simplebar'), filemtime(get_theme_file_path('/assets/js/common.js')), true);
 	// テーマのCSS
 	wp_enqueue_style('theme-common', get_theme_file_uri('/assets/css/style.css'), array(), filemtime(get_theme_file_path('/assets/css/style.css')));
 }

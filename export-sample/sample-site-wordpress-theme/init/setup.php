@@ -7,17 +7,16 @@ define('IMAGEPATH', get_template_directory_uri() . '/assets/images');
 define('HOME_URL', esc_url(home_url('/'))); // トップページ
 define('ABOUT_URL', esc_url(home_url('/about/'))); // 私たちについて
 define('COMPANY_URL', esc_url(home_url('/company/'))); // 会社概要
-define('WORKS_URL', esc_url(home_url('/works/'))); // 実績紹介
-define('SERVICES_URL', esc_url(home_url('/services/'))); // 事業内容
-define('ITEMS_URL', esc_url(home_url('/items/'))); // 商品紹介
+define('WORKS_URL', esc_url(home_url('/works/'))); // 実績
+define('ITEMS_URL', esc_url(home_url('/items/'))); // 商品
 define('CONTACT_URL', esc_url(home_url('/contact/'))); // お問い合わせ
-define('TOPICS_URL', esc_url(home_url('/topics/'))); // トピックス
 define('RECRUIT_URL', esc_url(home_url('/recruit/'))); // 採用情報
+define('TOPICS_URL', esc_url(home_url('/topics/'))); // トピックス
 define('THANKS_URL', esc_url(home_url('/thanks/'))); // お問い合わせ 完了ページ
 
 /* ---------- 外部リンク ---------- */
-define('SNS_X_URL', 'https://x.com'); // SNS X
-define('SNS_INSTAGRAM_URL', 'https://instagram.com'); // SNS インスタグラム
+define('SNS_X_URL', 'https://x.com'); // X
+define('SNS_INSTAGRAM_URL', 'https://example.com'); // インスタグラム
 
 /* ---------- セットアップ ---------- */
 function my_setup()
@@ -59,3 +58,31 @@ function disable_output()
 	remove_filter('the_excerpt', 'wpautop');  // 抜粋欄
 }
 add_action('init', 'disable_output');
+
+/* ---------- 固定ページで抜粋を使えるようにする ---------- */
+function enable_page_excerpt()
+{
+	add_post_type_support('page', 'excerpt');
+}
+add_action('init', 'enable_page_excerpt');
+
+/* ---------- マイグレーションでnode_modulesを除外 ---------- */
+$my_theme = wp_get_theme();
+$_theme_name = $my_theme->stylesheet;
+
+add_filter(
+	'ai1wm_exclude_themes_from_export',
+	function ($exclude_filters) {
+		global $_theme_name;
+		$exclude_filters = array(
+			"{$_theme_name}/gulp/node_modules",
+		);
+		return $exclude_filters;
+	}
+);
+
+/* ---------- サイドバーメニューから既存のタグを削除 ---------- */
+function remove_menu() {
+    remove_submenu_page('edit.php', 'edit-tags.php?taxonomy=post_tag');
+}
+add_action('admin_menu', 'remove_menu');

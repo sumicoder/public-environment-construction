@@ -13,5 +13,5 @@ if (empty($_GET['from']) || !isset($_GET['from'])) {
 ?>
 
 <?php get_header(); ?>
-
+<h1>ここは お問い合わせ 完了ページ です</h1>
 <?php get_footer(); ?>

@@ -1,22 +1,22 @@
 <?php
 
 /* --- 投稿タイプ複製の場合はここから --- */
-/* ---------- カスタム投稿 [実績紹介] を追加 ---------- */
+/* ---------- カスタム投稿 [実績] を追加 ---------- */
 function create_post_type_works() {
 	register_post_type(
 		'works',
 		array(
 			'labels' => array(
-				'name' => '実績紹介一覧',
-				'singular_name' => '実績紹介一覧',
-				'add_new' => '実績紹介を追加',
-				'add_new_item' => '実績紹介を追加',
-				'edit_item' => '実績紹介を編集',
-				'new_item' => '新しい実績紹介',
-				'view_item' => '実績紹介を表示',
-				'search_items' => '実績紹介を検索',
-				'not_found' => '実績紹介はありません',
-				'not_found_in_trash' => 'ゴミ箱に実績紹介はありません',
+				'name' => '実績一覧',
+				'singular_name' => '実績一覧',
+				'add_new' => '実績を追加',
+				'add_new_item' => '実績を追加',
+				'edit_item' => '実績を編集',
+				'new_item' => '新しい実績',
+				'view_item' => '実績を表示',
+				'search_items' => '実績を検索',
+				'not_found' => '実績はありません',
+				'not_found_in_trash' => 'ゴミ箱に実績はありません',
 			),
 			'public' => true,
 			'has_archive' => true,
@@ -64,22 +64,22 @@ add_action('init', 'create_custom_taxonomy_works_category');
 /* --- カスタムタクソノミー複製の場合はここまでをコピーして使う --- */
 
 /* --- 投稿タイプ複製の場合はここから --- */
-/* ---------- カスタム投稿 [商品紹介] を追加 ---------- */
+/* ---------- カスタム投稿 [商品] を追加 ---------- */
 function create_post_type_items() {
 	register_post_type(
 		'items',
 		array(
 			'labels' => array(
-				'name' => '商品紹介一覧',
-				'singular_name' => '商品紹介一覧',
-				'add_new' => '商品紹介を追加',
-				'add_new_item' => '商品紹介を追加',
-				'edit_item' => '商品紹介を編集',
-				'new_item' => '新しい商品紹介',
-				'view_item' => '商品紹介を表示',
-				'search_items' => '商品紹介を検索',
-				'not_found' => '商品紹介はありません',
-				'not_found_in_trash' => 'ゴミ箱に商品紹介はありません',
+				'name' => '商品一覧',
+				'singular_name' => '商品一覧',
+				'add_new' => '商品を追加',
+				'add_new_item' => '商品を追加',
+				'edit_item' => '商品を編集',
+				'new_item' => '新しい商品',
+				'view_item' => '商品を表示',
+				'search_items' => '商品を検索',
+				'not_found' => '商品はありません',
+				'not_found_in_trash' => 'ゴミ箱に商品はありません',
 			),
 			'public' => true,
 			'has_archive' => true,
